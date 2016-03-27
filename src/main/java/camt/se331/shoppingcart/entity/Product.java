@@ -8,7 +8,11 @@ import javax.persistence.Id;
  * Created by Dto on 2/7/2015.
  */
 
+@Entity
 public class Product implements Comparable{
+
+    @Id
+    @GeneratedValue
 
     Long id;
     String name;
