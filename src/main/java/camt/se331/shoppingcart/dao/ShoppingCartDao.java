@@ -15,11 +15,11 @@ import java.util.List;
  */
 
 public interface ShoppingCartDao {
-
+    ShoppingCart findById(Long id);
     List<ShoppingCart> getShoppingCarts();
     List<ShoppingCart> getShoppingCartBefore(Date stateDate);
     List<ShoppingCart> getShoppingCartBetween(Date stateDate, Date stopDate);
     ShoppingCart addShoppingCart(ShoppingCart shoppingCart);
     ShoppingCart deleteShoppingCart(ShoppingCart shoppingCart);
-    ShoppingCart findById(Long id);
+
 }

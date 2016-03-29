@@ -1,4 +1,4 @@
-package camt.se331.shoppingcart.service;
+package camt.se331.shoppingcart.dao;
 
 import camt.se331.shoppingcart.dao.ShoppingCartDao;
 import camt.se331.shoppingcart.entity.ShoppingCart;
@@ -17,6 +17,11 @@ import java.util.List;
 public class ShoppingCartDaoImpl implements ShoppingCartDao {
     @Autowired
     ShoppingCartRepository shoppingCartRepository;
+
+    @Override
+    public ShoppingCart findById(Long id) {
+        return shoppingCartRepository.findOne(id);
+    }
 
     @Override
     public List<ShoppingCart> getShoppingCarts() {
@@ -41,10 +46,5 @@ public class ShoppingCartDaoImpl implements ShoppingCartDao {
     @Override
     public ShoppingCart deleteShoppingCart(ShoppingCart shoppingCart) {
         return null;
-    }
-
-    @Override
-    public ShoppingCart findById(Long id) {
-        return shoppingCartRepository.findOne(id);
     }
 }

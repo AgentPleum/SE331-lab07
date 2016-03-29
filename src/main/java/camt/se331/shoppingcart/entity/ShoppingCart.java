@@ -36,10 +36,12 @@ public class ShoppingCart {
     }
 
     public Date getPurchaseDate() {
+
         return purchaseDate;
     }
 
     public void setPurchaseDate(Date purchaseDate) {
+
         this.purchaseDate = purchaseDate;
     }
 
@@ -50,5 +52,9 @@ public class ShoppingCart {
 
     public ShoppingCart() {
 
+    }
+
+    public void setId(long id) {
+        this.id = id;
     }
 }

@@ -18,9 +18,17 @@ public class SelectedProduct {
     Product product;
     Integer amount;
 
+    public Long getId() {
+        return id;
+    }
+
+    public void setId(Long id) {
+        this.id = id;
+    }
     public Double getTotalPrice(){
         return 0.0;
     }
+
 
     public SelectedProduct() {
     }

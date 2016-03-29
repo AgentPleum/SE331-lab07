@@ -10,10 +10,8 @@ import javax.persistence.Id;
 
 @Entity
 public class Product implements Comparable{
-
     @Id
     @GeneratedValue
-
     Long id;
     String name;
     String description;
@@ -30,7 +28,7 @@ public class Product implements Comparable{
 
     public Product(){
 
-    };
+    }
 
     public Double getNetPrice(){
         return getTotalPrice()*(1-VatEntity.getInstance().getVat());
