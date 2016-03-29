@@ -11,11 +11,18 @@ import java.util.List;
 /**
  * Created by Dto on 2/8/2015.
  */
+@CrossOrigin
 @RestController
 @RequestMapping("/")
 public class ProductController {
     @Autowired
     ProductService productService;
+
+    @RequestMapping(value = "getProduct",method = RequestMethod.GET)
+    public  List<Product> getListByName(@RequestParam("name")String name){
+        return productService.getProductsByNameOrDescription(name,name);
+    }
+
 
     @RequestMapping(value = "product",method = RequestMethod.GET)
     public  List<Product> list(){
