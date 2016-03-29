@@ -7,4 +7,5 @@ import org.springframework.data.jpa.repository.JpaRepository;
  * Created by AgentP on 3/27/2016.
  */
 public interface ProductRepository  extends JpaRepository<Product,Long>{
+
 }
