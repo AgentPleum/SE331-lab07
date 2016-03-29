@@ -12,7 +12,7 @@ import java.util.List;
 public class DbProductDao implements ProductDao {
     @Autowired
    ProductRepository productRepository;
-    
+
     @Override
     public List<Product> getProducts() {
         return productRepository.findAll();
@@ -39,12 +39,12 @@ public class DbProductDao implements ProductDao {
     @Override
     public Product addProduct(Product product) {
 
-        return ProductRepository.save(product);
+        return productRepository.save(product);
     }
 
     @Override
     public Product deleteProduct(Product product) {
-        ProductRepository.delete(product);
+        productRepository.delete(product);
         product.setId(null);
         return product;
     }
